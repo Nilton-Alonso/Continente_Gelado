@@ -1,0 +1,110 @@
+
+body {
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+section {
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  background-color: #fff;
+  margin-bottom: 2px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+h2 {
+  font-weight: 700;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  animation: slide-in 1s ease-out forwards;
+}
+@keyframes slide-in {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.img-hover-effect {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  cursor: pointer;
+}
+.img-hover-effect:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.section-scroll {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease-out;
+}
+.section-scroll.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+form {
+  background: #fefefe;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 2rem;
+}
+form .form-label {
+  font-weight: 500;
+}
+form .btn {
+  transition: all 0.3s ease;
+}
+form .btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+#painel img {
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#painel img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.carousel-item img {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+table {
+  margin-top: 20px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+table thead {
+  background-color: #343a40;
+  color: #fff;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0,0,0,0.02);
+}
+@keyframes zoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+.animate-zoom {
+  animation: zoom 4s infinite ease-in-out;
+}
+@media (max-width: 768px) {
+  section {
+    padding: 2rem 1rem;
+  }
+  .carousel-item img {
+    height: 200px;
+  }
+  #painel img {
+    margin-bottom: 1rem;
+  }
+}
